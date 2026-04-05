@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Cinzel", serif;
+  --font-mono: "Rajdhani", monospace;
+  
+  /* Black & Yellow Palette */
+  --color-primary: #FFD400;
+  --color-bg: #050505;
+  --color-surface: #111111;
+  --color-surface-light: #222222;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: radial-gradient(circle at top center, rgba(255, 212, 0, 0.1) 0%, transparent 50%);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glow-yellow {
+    box-shadow: 0 0 15px rgba(255, 212, 0, 0.5);
+  }
+  .glow-yellow-strong {
+    box-shadow: 0 0 30px rgba(255, 212, 0, 0.8);
+  }
+  .glow-text-yellow {
+    text-shadow: 0 0 15px rgba(255, 212, 0, 0.6);
+  }
+  .card-3d {
+    background: var(--color-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, #FFD400 0%, #D97706 100%);
+    color: #050505;
+    border: 1px solid #FEF08A;
+    box-shadow: 0 6px 0 #92400E, 0 15px 25px rgba(255, 212, 0, 0.3);
+    transition: all 0.2s;
+  }
+  .btn-primary:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #92400E, 0 5px 10px rgba(255, 212, 0, 0.3);
+  }
+  
+  .hex-shape {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}

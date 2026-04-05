@@ -1,0 +1,5 @@
+{
+  "name": "LinguaGo",
+  "description": "Aplicativo de idiomas moderno, gamificado e eficiente.",
+  "requestFramePermissions": ["microphone"]
+}
